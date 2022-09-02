@@ -1,1 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
+.btn {
+	padding: 20px 40px;
+
+	line-height: 26px;
+	color: #fff;
+	background: #FC0A7E;
+	border-radius: 3px;
+	transition: all .4s;
+
+	@media (min-width:$mobile) {
+		&:hover {
+			background: #a1034f;
+		}
+	}
+}
