@@ -1,0 +1,196 @@
+//====================================================================================================
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
+	// .header__container
+
+	&__container {
+		width: percent(1150px, 1440px);
+		height: rem(100);
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .header__logo
+
+	&__logo {
+		transition: all .4s;
+
+		@media (min-width: em(768)) {
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+
+
+	// .header__menu
+
+	&__menu {}
+
+	@media (max-width:$tablet) {
+		&__container {
+			width: 95%;
+		}
+	}
+}
+
+.menu {
+
+	// .menu__icon
+
+	&__icon {}
+
+	// .menu__body
+
+	&__body {}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		height: 36px;
+		gap: 0 30px;
+	}
+
+	// .menu__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	// .menu__link
+
+	&__link {
+		color: #fff;
+		font-size: 15px;
+		line-height: 20px;
+		transition: all .4s;
+
+		@media (min-width:em(768)) {
+			&:hover {
+				opacity: .6;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (max-width:$mobile) {
+		&__body {
+			opacity: 0;
+			visibility: hidden;
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.582);
+
+			transition: opacity .4s;
+		}
+
+		&__list {
+			padding: 95px 60px 60px 60px;
+			height: 100vh;
+			width: 70%;
+			background: #fc0a7f;
+			position: absolute;
+			right: -100%;
+			top: 0;
+			flex-direction: column;
+			gap: 35px;
+			transition: all .4s;
+		}
+
+		&__item {}
+
+		&__link {
+			font-weight: 700;
+			font-size: 26px;
+		}
+
+	}
+
+
+	.menu-open & {
+
+		&__body {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&__list {
+			right: 0;
+		}
+	}
+}
+
+.icon-menu {}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: absolute;
+		right: 25px;
+		top: 40px;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: rgb(255, 255, 255);
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
