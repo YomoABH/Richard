@@ -1,0 +1,45 @@
+.porta {
+	background: #1B1B1B;
+	padding-top: calc($index * 5.25);
+	box-sizing: border-box;
+	// .porta__container
+
+	&__container {}
+
+	// .porta__title
+
+	&__title {
+		font-size: 12px;
+		line-height: 20px;
+		text-align: center;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #A8A8A8;
+
+		margin-bottom: rem(30);
+	}
+
+	// .porta__subtitle
+
+	&__subtitle {
+		font-size: 38px;
+		line-height: 48px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 55px;
+	}
+
+	&__img {
+		margin: 0 auto;
+		display: block;
+		max-width: 100%;
+	}
+
+	@media (max-width:$mobile) {
+		&__subtitle {
+			font-size: 26px;
+			line-height: 30px;
+		}
+
+	}
+}
