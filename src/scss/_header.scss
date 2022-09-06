@@ -28,8 +28,7 @@
 	}
 
 
-	// .header__menu
-
+	// .header__menus
 	&__menu {}
 
 	@media (max-width:$tablet) {
@@ -98,7 +97,7 @@
 			padding: 95px 60px 60px 60px;
 			height: 100vh;
 			width: 70%;
-			background: #c70161;
+			background: #fc0a7f;
 			position: absolute;
 			right: -100%;
 			top: 0;
@@ -130,7 +129,6 @@
 	}
 }
 
-.icon-menu {}
 
 //====================================================================================================
 
@@ -177,9 +175,6 @@
 			span {
 				width: 0;
 			}
-
-			&::before,
-			&::after {}
 
 			&::before {
 				top: calc(50% - rem(1));
