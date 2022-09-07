@@ -1,0 +1,51 @@
+.statistics {
+
+	// .statistics__flex-container
+
+	&__flex-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	// .statistics__item
+
+	&__item {
+		text-align: center;
+		width: percent(324, 1440);
+	}
+
+	// .statistics__item-count
+
+	&__item-count {
+		margin-bottom: 10px;
+		font-size: 59px;
+		line-height: 153%;
+		color: #333333;
+	}
+
+	// .statistics__item-name
+
+	&__item-name {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 133%;
+	}
+
+	@media (max-width:$tablet) {
+		&__flex-container {
+			flex-wrap: wrap;
+			gap: 50px 0;
+		}
+
+		&__item {
+			text-align: center;
+			width: 40%;
+		}
+	}
+
+	@media (max-width:$mobileSmall) {
+		&__item {
+			width: 80%;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+.food {
+	padding: 160px 20px;
+	// .food__flex-container
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		gap: 160px 0;
+	}
+
+	// .food__flex-item
+
+	&__flex-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 80px;
+
+		&--revers {
+			flex-direction: row-reverse;
+		}
+	}
+
+	// .food__content
+
+	&__content {
+		width: 330px;
+	}
+
+	// .food__title
+
+	&__title {}
+
+	// .food__subtitle
+
+	&__subtitle {}
+
+	// .food__descr
+
+	&__descr {}
+
+	// .food__img
+
+	&__img {
+		width: percent(520, 1440);
+
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width:$mobile) {
+		&__flex-item {
+			flex-direction: column-reverse;
+		}
+
+		&__content {
+			text-align: center;
+		}
+
+		&__img {
+			width: 80%;
+		}
+	}
+
+	@media (max-width:$mobileSmall) {
+		&__img {
+			width: 90%;
+		}
+	}
+}
