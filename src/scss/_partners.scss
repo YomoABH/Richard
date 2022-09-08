@@ -1,0 +1,41 @@
+.partners {
+	padding: 160px 20px 80px 20px;
+	// .partners__comments
+
+	&__comments {
+		margin: 0 auto;
+		text-align: center;
+		width: percent(700, 1440);
+		font-size: 24px;
+		line-height: 40px;
+		color: #6B6B6B;
+		margin: 0 auto 140px auto;
+	}
+
+	// .partners__logo
+
+	&__logo {
+		img {
+			max-width: 100%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	@media (max-width:$mobile) {
+		&__comments {
+			font-size: 22px;
+			width: 80%;
+		}
+	}
+
+	@media (max-width:$mobileSmall) {
+		padding: 0px 20px 80px 20px;
+
+		&__comments {
+			width: 90%;
+			font-size: 20px;
+			margin-bottom: 100px;
+		}
+	}
+}
