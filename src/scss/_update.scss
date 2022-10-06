@@ -16,6 +16,7 @@
 		line-height: 126%;
 		margin-bottom: 20px;
 		color: #fff;
+		text-align: center;
 	}
 
 	// .update__subtitle
@@ -25,6 +26,7 @@
 		line-height: 188%;
 		color: #6B6B6B;
 		margin-bottom: 40px;
+		text-align: center;
 	}
 
 	// .update__form
@@ -32,6 +34,11 @@
 	&__form {
 		display: flex;
 		align-items: center;
+
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
+			gap: 30px;
+		}
 	}
 
 	// .update__input
@@ -56,6 +63,10 @@
 			line-height: 26px;
 			opacity: 1;
 			color: #000;
+		}
+
+		@media (max-width:$mobileSmall) {
+			width: 90vw;
 		}
 	}
 
