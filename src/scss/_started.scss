@@ -1,0 +1,80 @@
+.started {
+	padding: calc($index * 5.5) 0;
+	background: url(@img/bg/startedBg.png) center/cover no-repeat;
+
+	// .started__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	// .started__content
+
+	&__content {}
+
+	// .started__title
+
+	&__title {
+		font-weight: 400;
+		font-size: 38px;
+		line-height: 126%;
+		color: #fff;
+		margin-bottom: 40px;
+
+		@media (max-width:$mobile) {
+			font-size: 31px;
+		}
+	}
+
+	// .started__btns
+
+	&__btns {
+		display: flex;
+		gap: 10px;
+
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	// .started__bit
+
+	&__bit {
+		font-size: 16px;
+		color: #fff;
+		border: 1px solid #B04BB3;
+		transition: background .3s;
+
+		padding: 20px 40px;
+
+		@media (min-width:$mobile) {
+			&:hover {
+				background: #FC0A7E;
+				border-radius: 3px;
+				border: none;
+				padding: 21px 41px;
+			}
+		}
+	}
+
+	// .started__bit--pip
+
+	&__bit--pip {
+		background: #FC0A7E;
+		border-radius: 3px;
+		border: none;
+		transition: background .3s;
+
+		@media (min-width:$mobile) {
+			&:hover {
+				border: 1px solid #B04BB3;
+				background: transparent;
+				padding: 19px 39px;
+			}
+		}
+	}
+}
